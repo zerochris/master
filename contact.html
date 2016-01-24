@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>J-Magic</title>
+	<link rel="icon" href="img/icon.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="css/myStyle.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+	<div id="subHeader"></div>
+	<div id="subHeaderMenu" class="hidden-xs hidden-sm">
+		<a id="headerToggleLang" class="subHeaderMenuItem"></a>
+		<a id="headerEmail" href="mailto:magiciancris@ymail.com" class="subHeaderMenuItem"></a>
+		<a id="headerFB" href="https://www.facebook.com/Jesusmagician/" class="subHeaderMenuItem"></a>
+	</div>
+	<div id="header"></div>
+	
+ <!-- Half Page Image Background Carousel Header -->
+ 
+	<div class="container fade">
+		<div id="contactBanner" class="hidden-xs hidden-sm"></div>
+		<div class="bs-callout bs-callout-primary visible-xs visible-sm"><h2>Contact</h2></div>
+		<div id="contactContent">
+			<div class="row">	
+				<div class="col-md-6 hidden-xs hidden-sm contact_logo">
+					<img src="img/contact_logo.png" />
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<div class="col-sm-12 col-xs-12 col-md-12 contact_row">CRIS TANG</div>
+					<div class="col-sm-12 col-xs-12 col-md-12 contact_row">
+						<div class="col-sm-2 col-xs-2 col-md-2 contact_row_logo phone"></div>
+						<div class="col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-sm-9 col-xs-9 col-md-9 contact_row_content phone">(+852) 6772 0093</div>
+					</div>
+					<div class="col-sm-12 col-xs-12 col-md-12 contact_row">
+						<div class="col-sm-2 col-xs-2 col-md-2 contact_row_logo email"></div>
+						<div class="col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-sm-9 col-xs-9 col-md-9 contact_row_content email">magiciancris@ymail.com</div>
+					</div>
+					<div class="col-sm-12 col-xs-12 col-md-12 contact_row">
+						<div class="col-sm-2 col-xs-2 col-md-2 contact_row_logo facebookLogo"></div>
+						<div class="col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-sm-9 col-xs-9 col-md-9 contact_row_content facebook"></div>
+					</div>
+					
+				</div>
+			</div> 
+		</div>
+    </div>
+	<br/>
+	<div id="divider"></div>
+	<br/>
+	<div id="footer"></div>
+	<!-- /.container -->
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	<script src="js/myScript.js"></script>
+	
+	<script type="text/babel">
+		var CollapseBtn = React.createClass({
+			render: function(){
+				return (
+					<div className="navbar-header">
+						<span className="navbar-brand visible-xs">
+							<img style={{display: "inline-block !important"}} alt="Brand" src="img/icon.png" height="40px" />
+							<span>  J-Magic</span>
+						</span>
+						<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+							<span className="icon-bar top-bar"></span>
+							<span className="icon-bar middle-bar"></span>
+							<span className="icon-bar bottom-bar"></span>
+						</button>
+					</div>
+				);
+			}
+		});
+		var Menu = React.createClass({
+			render: function(){
+				return(
+					<div className="collapse navbar-collapse" id="menu">
+						<ul className="nav navbar-nav">
+							<li className={this.props.activeTag=='home'? 'active': ''}>
+								<a className="RedBtn" href="/home">Home</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='intro'? 'active': ''}>
+								<a className="OrangeBtn" href="/about">Intro</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='service'? 'active': ''}>
+								<a className="YellowBtn" href="/services">Services</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='partner'? 'active': ''}>
+								<a className="GreenBtn" href="/partners">Partners</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='media'? 'active': ''}>
+								<a className="BlueBtn" href="/media">Media</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='contact'? 'active': ''}>
+								<a className="PurpleBtn" href="/contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+				);
+			}
+		});
+
+		var Title = React.createClass({
+			render: function(){
+				return (
+					<div className={this.props.cssClass}>
+						<h2>{this.props.title}</h2>
+					</div>
+				);
+			}
+		});
+
+		var Header = React.createClass({
+			render: function(){
+				return(
+					<nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+						<div className="container">
+							<CollapseBtn />
+							<Menu activeTag={this.props.activeTag}/>
+						</div>
+					</nav>
+				);
+			}
+		});
+
+		var Footer = React.createClass({
+			render: function(){
+				return (
+					<footer>
+						<div className="row">
+							<div className="col-xs-12 text-right">
+								<p className="VerseDarkGrey">Copyright &copy; J-Magic Reserved</p>
+								<p className="VerseMediumGrey"><strong>{this.props.data.book}</strong> <cite>{this.props.data.verse}</cite></p>
+							</div>
+						</div>
+					</footer>
+				);
+			}
+		});
+
+		var VerseSource = React.createClass({
+			getInitialState: function() {
+				return { verseList: undefined };
+			},
+
+			componentWillMount: function() {
+				$.get("/getVerseContent",{lang : localStorage.lang},  function(result) {
+					this.setState({verseList: result});
+				}.bind(this));
+			},
+			render: function(){
+				if ( !this.state.verseList ) {       
+					return false;
+				}
+				
+				var randomVerseID = Math.floor((Math.random()*this.state.verseList.length));
+				var randomVerse = this.state.verseList[randomVerseID];
+
+				return (
+					<Footer data={randomVerse}/>
+				);
+			}
+		});
+		
+		ReactDOM.render(
+			<Header activeTag="contact" />,
+			document.getElementById('header')
+		);
+
+		ReactDOM.render(
+			<VerseSource />,
+			document.getElementById('footer')
+		);
+	</script>
+
+
+</body>
+
+</html>

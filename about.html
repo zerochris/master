@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>J-Magic</title>
+	<link rel="icon" href="img/icon.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="css/myStyle.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+	<div id="subHeader"></div>
+	<div id="subHeaderMenu" class="hidden-xs hidden-sm">
+		<a id="headerToggleLang" class="subHeaderMenuItem"></a>
+		<a id="headerEmail" href="mailto:magiciancris@ymail.com" class="subHeaderMenuItem"></a>
+		<a id="headerFB" href="https://www.facebook.com/Jesusmagician/" class="subHeaderMenuItem"></a>
+	</div>
+	<div id="header"></div>
+	
+ <!-- Half Page Image Background Carousel Header -->
+ 
+	<div class="container fade">
+		<div id="introBanner" class="hidden-xs hidden-sm"></div>
+		<div class="bs-callout bs-callout-primary visible-xs visible-sm"><h2>Intro</h2></div>
+		<div id="introContent">
+			<p>Local professional magician, 10 years of experience for performance. Involved in performing arts, MC and classes teaching, including the birthday shows (magic tracks, balloon twisting and juggling), wedding parties, variety shows, etc. Be interviewed by magazines and newspapers.</p>
+			<br>
+			<p>
+				<b>Performance Experiences:</b> <br>
+				Performed for amusement parks, restaurants, events & parties, institutions. <br>
+				<br>
+				<b><i>Amusement Park: </i></b>Ocean Park, Noah's Ark<br>
+				<b><i>Restaurants: </i></b>Cafe Deco<br>
+				<b><i>Events & Parties: </i></b>CITIC Ka Wah Bank, DBS Bank, Regal Riverside Hotel, Langham Place Hotel, Royal Garden Hotel<br>
+				<b><i>Institutions: </i></b>Kowloon City Christians Church, Church 611, Kwai Tsing District Council environmental education, Asbury Methodist Social Service, The Church of Christ in China Shatin Church, etc.<br>
+			</p>
+			<br>
+			<p>
+				Teached Magic classes in Hong Kong Baptist University, Hong Kong Shue Yan University, Fanling Goverment Primary School, Minsheng College, Tin Shui Wai Methodist Primary School, Ma On Shan Tung Yu Primary School, Tung Yu College, Star Arts Music, Shatin Women's Association, the Hong Kong Workers Rehabilitation Centre, etc.
+			</p>
+		</div>
+	</div>
+	<br/>
+	<div id="divider"></div>
+	<br/>
+	<div id="footer"></div>
+	<!-- /.container -->
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	<script src="js/myScript.js"></script>
+	<script>
+		$.ajax({
+				url: "/getIntroContent",
+				method: "GET",
+				dataType: "json",
+				data: {lang : localStorage.lang},
+				success: function(data){
+					$("#introContent").html(data[0]);
+				}
+			});
+		
+	</script>
+	<script type="text/babel">
+		var CollapseBtn = React.createClass({
+			render: function(){
+				return (
+					<div className="navbar-header">
+						<span className="navbar-brand visible-xs">
+							<img style={{display: "inline-block !important"}} alt="Brand" src="img/icon.png" height="40px" />
+							<span>  J-Magic</span>
+						</span>
+						<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+							<span className="icon-bar top-bar"></span>
+							<span className="icon-bar middle-bar"></span>
+							<span className="icon-bar bottom-bar"></span>
+						</button>
+					</div>
+				);
+			}
+		});
+		var Menu = React.createClass({
+			render: function(){
+				return(
+					<div className="collapse navbar-collapse" id="menu">
+						<ul className="nav navbar-nav">
+							<li className={this.props.activeTag=='home'? 'active': ''}>
+								<a className="RedBtn" href="/home">Home</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='intro'? 'active': ''}>
+								<a className="OrangeBtn" href="/about">Intro</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='service'? 'active': ''}>
+								<a className="YellowBtn" href="/services">Services</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='partner'? 'active': ''}>
+								<a className="GreenBtn" href="/partners">Partners</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='media'? 'active': ''}>
+								<a className="BlueBtn" href="/media">Media</a>
+							</li>
+							<li className="menuDivider hidden-xs" />
+							<li className={this.props.activeTag=='contact'? 'active': ''}>
+								<a className="PurpleBtn" href="/contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+				);
+			}
+		});
+
+		var Title = React.createClass({
+			render: function(){
+				return (
+					<div className={this.props.cssClass}>
+						<h2>{this.props.title}</h2>
+					</div>
+				);
+			}
+		});
+
+		
+		var VerseSource = React.createClass({
+			getInitialState: function() {
+				return { verseList: undefined };
+			},
+
+			componentWillMount: function() {
+				$.get("/getVerseContent",{lang : localStorage.lang},  function(result) {
+					this.setState({verseList: result});
+				}.bind(this));
+			},
+			render: function(){
+				if ( !this.state.verseList ) {       
+					return false;
+				}
+				
+				var randomVerseID = Math.floor((Math.random()*this.state.verseList.length));
+				var randomVerse = this.state.verseList[randomVerseID];
+
+				return (
+					<Footer data={randomVerse}/>
+				);
+			}
+		});
+		
+		var Header = React.createClass({
+			render: function(){
+				return(
+					<nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+						<div className="container">
+							<CollapseBtn />
+							<Menu activeTag={this.props.activeTag}/>
+						</div>
+					</nav>
+				);
+			}
+		});
+
+		var Footer = React.createClass({
+			render: function(){
+				return (
+					<footer>
+						<div className="row">
+							<div className="col-xs-12 text-right">
+								<p className="VerseDarkGrey">Copyright &copy; J-Magic Reserved</p>
+								<p className="VerseMediumGrey"><strong>{this.props.data.book}</strong> <cite>{this.props.data.verse}</cite></p>
+							</div>
+						</div>
+					</footer>
+				);
+			}
+		});
+
+
+		ReactDOM.render(
+			<Header activeTag="intro" />,
+			document.getElementById('header')
+		);
+
+		ReactDOM.render(
+			<VerseSource />,
+			document.getElementById('footer')
+		);
+	</script>
+
+</body>
+</html>

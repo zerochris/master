@@ -1,0 +1,28 @@
+<p><b>Magic<br>Performance</b></p>
+<ul>
+	<li>Close up</li>
+	<li>Parlor</li>
+	<li>Stage</li>
+</ul>
+#
+<p><b>Balloon</b></p>
+<ul>
+	<li>Twisting</li>
+	<li>Decoration</li>
+</ul>
+#
+<p><b>Juggle<br>Performance</b></p>
+#
+<p><b>Face<br>painting</b></p>
+#
+<p><b>MC<br />service</b></p>
+#
+<p><b>Live Band<br>(Annual Dinner)</b></p>
+#
+<p><b>Rental</b></p>
+<ul>
+	<li>Popcorn<br>Machine</li>
+</ul>
+#
+<p><b>Photograph<br>Shooting</b></p>
+<p><b>video<br>recording</b></p>

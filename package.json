@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kirakira9/Cris.git"
+    "url": "git+https://github.com/zerochris/master.git"
   },
   "keywords": [
     "Test"
@@ -29,7 +29,7 @@
   "author": "Elmo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kirakira9/Cris/issues"
+    "url": "https://github.com/zerochris/master/issues"
   },
-  "homepage": "https://github.com/kirakira9/Cris#readme"
+  "homepage": "https://github.com/zerochris/master#readme"
 }

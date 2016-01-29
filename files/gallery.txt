@@ -1,3 +1,5 @@
+<b><br>Party Show</br></b>
+
 ./img/gallery/1_s.jpg#./img/gallery/1_b.jpg#
 #
 ./img/gallery/2_s.jpg#./img/gallery/2_b.jpg#
@@ -73,6 +75,8 @@
 ./img/gallery/37_s.jpg#./img/gallery/37_b.jpg#
 #
 ./img/gallery/38_s.jpg#./img/gallery/38_b.jpg#
+
+<b><br>Stage Show</br></b>
 #
 ./img/gallery/39_s.jpg#./img/gallery/39_b.jpg#
 #

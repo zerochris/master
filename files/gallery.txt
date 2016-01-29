@@ -73,3 +73,9 @@
 ./img/gallery/37_s.jpg#./img/gallery/37_b.jpg#
 #
 ./img/gallery/38_s.jpg#./img/gallery/38_b.jpg#
+#
+./img/gallery/39_s.jpg#./img/gallery/39_b.jpg#
+#
+./img/gallery/40_s.jpg#./img/gallery/40_b.jpg#
+#
+./img/gallery/41_s.jpg#./img/gallery/41_b.jpg#

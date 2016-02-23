@@ -13,6 +13,14 @@
 #
 <p><b>Juggle<br>Performance</b></p>
 #
+<p><b>Class Teaching</b></p>
+<ul>
+	<li>Close Up Magic Class</li>
+	<li>Stage Magic Class</li>
+	<li>Balloon Twisting Class</li>
+	<li>Juggling Class</li>
+</ul>
+#
 <p><b>Face<br>painting</b></p>
 #
 <p><b>MC<br />service</b></p>
